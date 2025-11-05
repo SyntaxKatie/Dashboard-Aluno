@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+:root {
+  font-family: 'Nunito', sans-serif;
+  background-color: #f5f6fa;
+  color: #213547;
+}
+
+/* tudinho */
+.app-container {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: #ffffff;
+  overflow-y: auto;
+}
+
+/* header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e0e0e0;
+  padding: 10px 20px;
+}
+
+/* container cards e ranking*/
+.cards-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+/* cards + gráfico*/
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+/* Cards na mema linha */
+.cards-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Coluna lateral direita (ranking + donut) */
+.side-column {
+  width: 380px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Seção do gráfico */
+.grafico-section {
+  width: 100%;
+}
+
+/* responsividade */
+@media (max-width: 1024px) {
+  .cards-wrapper {
+    flex-direction: column;
+  }
+
+  .side-column {
+    width: 100%;
+  }
+  
+  .grafico-section {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-row {
+    flex-direction: column;
+  }
+}
